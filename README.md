@@ -1,6 +1,6 @@
 # Every Stop
 
-This is a Twitter bot which tweets a Google Street View image of every single bus stop for Hong Kong.  But it could tweet any Open Street Map node that you provide it.
+This is a Twitter bot which tweets a Google Street View image of [every single bus stop for Hong Kong](https://twitter.com/everystophk).  But it could tweet any Open Street Map node that you provide it.
 
 ## Setup
 
