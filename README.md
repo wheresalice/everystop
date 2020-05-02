@@ -41,3 +41,7 @@ Visit the [Twitter Developers page](https://developer.twitter.com/en/apps) and c
 
 * Python 3.6
 * `pip3 install -r requirements.txt` for everything else
+
+## Thanks
+
+* Heavily inspired by [Everylot Bot](https://github.com/fitnr/everylotbot) but written from scratch for modern Python
