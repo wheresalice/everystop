@@ -1,0 +1,6 @@
+.env
+venv
+.idea
+sv.jpg
+export.json
+stops.db
