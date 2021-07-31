@@ -4,3 +4,5 @@ venv
 sv.jpg
 export.json
 stops.db
+*.secret
+__pycache__

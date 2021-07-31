@@ -47,11 +47,21 @@ The application reads credential data from environment variables.  You can expor
 
 Visit the [Google Street View Image API page](https://developers.google.com/maps/documentation/streetview/) and click get a key. Make sure that your account and key has street view enabled.  Once you have the key, place it in the `.env` file.
 
-Visit the [Twitter Developers page](https://developer.twitter.com/en/apps) and create an app.  Fill in the credentials in the `.env` file.
-
 ## Usage
 
+Both Twitter and Mastodon versions update the stops.db file, so you can only run one.  You should use a cross-posting service if you want the same posts to appear in both, and it is easier to do this in the Mastodon to Twitter direction.
+
+### Twitter
+
+Visit the [Twitter Developers page](https://developer.twitter.com/en/apps) and create an app.  Fill in the credentials in the `.env` file.
+
 `python3 everystop.py`
+
+### Mastodon
+
+You'll need to first edit `mastodon_register.py` to specify your instance base url along with your email and password.
+
+Then you can run `python mastodon_register.py` to create some secret files, and then `python mastodon_poster.py` to actually post.
 
 ## Dependencies
 
