@@ -27,6 +27,24 @@ out body;
 out skel qt;
 ```
 
+More generically, a search for bus stops within an area defined by a relation ID might look like:
+
+```
+[out:json][timeout:250];
+
+rel(1842114);
+map_to_area -> .a;
+(
+node(area.a)[highway=bus_stop];
+  way(area.a)[highway=bus_stop];
+  relation(area.a)[highway=bus_stop];
+);
+
+out body;
+>;
+out skel qt;
+```
+
 Place the resulting export.json file in this directory.
 
 If you are bringing a geojson file from elsewhere then know that we expect each geojson element to include a name, id, latitude and longitude.
@@ -51,11 +69,17 @@ Visit the [Google Street View Image API page](https://developers.google.com/maps
 
 Both Twitter and Mastodon versions update the stops.db file, so you can only run one.  You should use a cross-posting service if you want the same posts to appear in both, and it is easier to do this in the Mastodon to Twitter direction.
 
+### Basic validation
+
+`python3 everystop.py` will perform any database migrations required and fetch a random bus stop, saving the image to `sv.jpg` and printing out the details of the stop
+
+This will hit the Google API, so will cost money if you have the credentials configured correctly. But it will not update the database to set the stop as being visited.
+
 ### Twitter
 
 Visit the [Twitter Developers page](https://developer.twitter.com/en/apps) and create an app.  Fill in the credentials in the `.env` file.
 
-`python3 everystop.py`
+`python3 twitter_poster.py`
 
 ### Mastodon
 

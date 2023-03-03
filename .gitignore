@@ -6,3 +6,6 @@ export.json
 stops.db
 *.secret
 __pycache__
+stops.txt
+*.bak
+*.geojson
